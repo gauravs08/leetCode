@@ -1,8 +1,8 @@
 # leetCode
 Solutions to some of the leetCode challenges
 
-Problem 3: [LongestSubstringLength](src/java/LongestSubstringLength.java)
-
+### Problem 3: [LongestSubstringLength](src/java/LongestSubstringLength.java)
+<details>
 ‘Longest Substring Without Repeating Characters.’ Given a string, the task is to find the length of the longest substring in the string that does not contain any repeating characters. This problem is often used as a basis for other more complex problems and has applications in a wide range of fields, including natural language processing, bioinformatics, and machine learning.
 
 Problem:
@@ -31,4 +31,26 @@ Output: 3
 
 Explanation: The answer is "wke", with the length of 3.
 Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+</details>
 
+### Problem 207: Course Schedule</b> [CourseScheduling207.java](src%2Fjava%2FCourseScheduling207.java)
+
+<details>There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must take course bi first if you want to take course ai.
+
+
+For example, the pair [0, 1], indicates that to take course 0 you have to first take course 1.
+Return true if you can finish all courses. Otherwise, return false.
+
+Example 1:
+
+Input: numCourses = 2, prerequisites = [[1,0]]
+Output: true
+Explanation: There are a total of 2 courses to take.
+To take course 1 you should have finished course 0. So it is possible.
+Example 2:
+
+Input: numCourses = 2, prerequisites = [[1,0],[0,1]]
+Output: false
+Explanation: There are a total of 2 courses to take.
+To take course 1 you should have finished course 0, and to take course 0 you should also have finished course 1. So it is impossible.
+</details>
