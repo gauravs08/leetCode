@@ -163,3 +163,92 @@ Constraints:
 -100 <= nums[i] <= 100
 nums is sorted in non-decreasing order.
 </details>
+
+
+### Problem 111: Greatest next number with same sum [GreatestNextNumberWithSameSum.java](src/java/GreatestNextNumberWithSameSum.java)
+<details>
+which, given an integer N, returns the smallest integer that is greater than N and the sum of whose digits is equal to the sum of the digits of N.
+Examples:
+
+1. Given N = 28, your function should return 37. The sum of the digits of 28 is equal to 2 + 8 = 10. The subsequent numbers are (with the sum of their digits in brackets): 29 (11), 30 (3), 31 (4), 32 (5), 33 (6), 34 (7), 35 (8), 36 (9) and 37 (10). 37 is the smallest number bigger than 28 whose digits add up to 10.
+
+2. Given N = 734, your function should return 743. The sum of the digits of 734 and 743 are equal 7 + 3 + 4 = 7+ 4 + 3 = 14. No other integer between 735 and 742 adds up to 14.
+
+3. Given N = 1990, your function should return 2089. The sum of the digits of both numbers is equal to 19 and there is no other integer between them with the same sum of digits.
+
+4. Given N = 1000, your function should return 10000. The sum of the digits of both numbers is equal to 1 and there is no other number integer between them with the same sum of digits.
+</details>
+
+### Problem 1253: Reconstruct a 2-Row Binary Matrix [Reconstruct2RowBinaryMatrix.java](src/java/Reconstruct2RowBinaryMatrix.java)
+<details>
+https://leetcode.com/problems/reconstruct-a-2-row-binary-matrix/
+
+Given the following details of a matrix with n columns and 2 rows :
+
+The matrix is a binary matrix, which means each element in the matrix can be 0 or 1.
+The sum of elements of the 0-th(upper) row is given as upper.
+The sum of elements of the 1-st(lower) row is given as lower.
+The sum of elements in the i-th column(0-indexed) is colsum[i], where colsum is given as an integer array with length n.
+Your task is to reconstruct the matrix with upper, lower and colsum.
+
+Return it as a 2-D integer array.
+
+If there are more than one valid solution, any of them will be accepted.
+
+If no valid solution exists, return an empty 2-D array.
+
+
+```
+Example 1:
+Input: upper = 2, lower = 1, colsum = [1,1,1]
+Output: [[1,1,0],[0,0,1]]
+Explanation: [[1,0,1],[0,1,0]], and [[0,1,1],[1,0,0]] are also correct answers.
+```
+
+```
+Example 2:
+Input: upper = 2, lower = 3, colsum = [2,2,1,1]
+Output: []
+```
+```
+Example 3:
+Input: upper = 5, lower = 5, colsum = [2,1,2,0,1,0,1,2,0,1]
+Output: [[1,1,1,0,1,0,0,1,0,0],[1,0,1,0,0,0,1,1,0,1]]
+```
+
+```
+Constraints:
+
+1 <= colsum.length <= 10^5
+0 <= upper, lower <= colsum.length
+0 <= colsum[i] <= 2
+```
+</details>
+
+
+### Problem 111: Palindrome Integer Without String or Additional Memory [PalindromeInteger.java](src/java/PalindromeInteger.java)
+<details>
+https://leetcode.com/problems/palindrome-number/
+Write a function that determines if an integer is a palindrome without converting it to a string or using additional memory.
+Given an integer x, return true if x is a palindrome, and false otherwise.
+An integer is a palindrome when it reads the same backward as forward. For example, 121 is a palindrome while 123 is not.
+
+````
+Example 1:
+Input: x = 121
+Output: true
+Example 2:
+Input: x = -121
+Output: false
+Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
+Example 3:
+Input: x = 10
+Output: false
+Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
+Example 4:
+Input: x = -101
+Output: false
+Constraints:
+-2^31 <= x <= 2^31 - 1
+````
+</details>

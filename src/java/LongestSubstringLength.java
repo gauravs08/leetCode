@@ -1,3 +1,9 @@
+// LongestSubstringLength.java
+// This class provides a method to find the length of the longest substring without repeating characters in a given string.
+// The algorithm uses a sliding window approach with a HashMap to track the last seen index of each character.
+// This ensures O(n) time complexity, where n is the length of the string.
+// For problem details, see the README: ../../README.md (Problem 3: LongestSubstringLength)
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -5,31 +11,26 @@ public class LongestSubstringLength {
     public static int lengthOfLongestSubstring(String s) {
         // Map to store characters and their last seen indices
         Map<Character, Integer> charMap = new HashMap<>();
-        int maxLength = 0;
-        int start = 0;
+        int maxLength = 0; // Stores the maximum length found
+        int start = 0;     // Start index of the current window
         for (int end = 0; end < s.length(); end++) {
-            System.out.println("end:"+end);
+            // Get the current character at the end of the window
             char currentChar = s.charAt(end);
-            System.out.println("currentChar:" + currentChar);
+            // If the character is already in the map and its index is within the current window
             if (charMap.containsKey(currentChar)) {
-                // Update the start index to the next index after the last occurrence of the current character
-                System.out.println("MAX(start,CharIndex): max(" + start + ", " + (charMap.get(currentChar) + 1)+")");
+                // Move the start to the next index after the last occurrence of currentChar
                 start = Math.max(start, charMap.get(currentChar) + 1);
-                System.out.println("start:" + start);
             }
             // Update the maximum length if a longer substring is found
             maxLength = Math.max(maxLength, end - start + 1);
-            System.out.println("maxLength:" + maxLength);
-            // Store the index of the current character
+            // Store/update the index of the current character
             charMap.put(currentChar, end);
-            System.out.println("CharMap:" + charMap);
-            System.out.println("-------------");
         }
-
         return maxLength;
     }
 
     public static void main(String[] args) {
+        // Example test cases
         String s1 = "abcabcbb";
         System.out.println("Input: " + s1);
         System.out.println("Output: " + lengthOfLongestSubstring(s1));
